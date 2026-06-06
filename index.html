@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Night Picker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="src/css/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="10" width="32" height="22" rx="3" fill="var(--accent)"/>
+          <rect x="4" y="10" width="32" height="6" rx="2" fill="var(--navy-light)"/>
+          <line x1="10" y1="10" x2="10" y2="16" stroke="var(--accent)" stroke-width="2"/>
+          <line x1="18" y1="10" x2="18" y2="16" stroke="var(--accent)" stroke-width="2"/>
+          <line x1="26" y1="10" x2="26" y2="16" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="20" cy="25" r="5" fill="var(--bg)"/>
+          <polygon points="18,22 18,28 24,25" fill="var(--accent)"/>
+        </svg>
+        <span>Movie Night Picker</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link active">Search</a>
+        <a href="watchlist.html" class="nav-link">
+          Watchlist
+          <span class="watchlist-count" id="nav-watchlist-count">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">What are we<br/><em>watching tonight?</em></h1>
+        <p class="hero-sub">Search by title, browse by genre, or let us decide for you.</p>
+
+        <div class="search-bar-wrap">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Search movies…"
+            autocomplete="off"
+          />
+          <button class="btn-pick" id="pick-btn" title="Pick a random movie for me">
+            🎲 Pick for Me
+          </button>
+        </div>
+
+        <div class="search-history" id="search-history"></div>
+
+        <div class="genre-row" id="genre-row">
+          <!-- Genre chips populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="results-section" id="results-section" hidden>
+      <div class="results-header">
+        <h2 id="results-heading">Results</h2>
+        <span id="results-count" class="results-count"></span>
+      </div>
+      <div class="results-grid" id="results-grid">
+        <!-- Movie cards injected by JS -->
+      </div>
+      <div class="load-more-wrap" id="load-more-wrap" hidden>
+        <button class="btn-secondary" id="load-more-btn">Load more</button>
+      </div>
+    </section>
+
+    <div class="empty-state" id="empty-state" hidden>
+      <p>No movies found. Try a different search or genre.</p>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>

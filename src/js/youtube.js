@@ -2,7 +2,7 @@
 // youtube.js — YouTube Data API trailer lookup
 // ============================================================
 
-const YT_KEY  = 'YOUR_YOUTUBE_API_KEY_HERE'; // ← replace with your key
+const YT_KEY = 'AIzaSyBRdPDt57NHX69lm_wZV9q-4CHOrRjx18o';
 const YT_BASE = 'https://www.googleapis.com/youtube/v3';
 
 // ── Cache ────────────────────────────────────────────────────

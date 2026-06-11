@@ -2,7 +2,7 @@
 // tmdb.js — all TMDB API fetch functions
 // ============================================================
 
-const API_KEY = 'YOUR_TMDB_API_KEY_HERE'; // ← replace with your key
+const API_KEY = 'a142757266d6619ea9749c209510a606';
 const BASE    = 'https://api.themoviedb.org/3';
 const IMG     = 'https://image.tmdb.org/t/p';
 
